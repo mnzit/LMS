@@ -4,9 +4,19 @@ import com.allena.lms.db.JdbcTemplate;
 import com.allena.lms.mapper.StudentMapper;
 import com.allena.lms.model.Student;
 
+import java.util.List;
+
 public class StudentRepository {
 
     private final JdbcTemplate<Student> studentJdbcTemplate = new JdbcTemplate<>();
+
+    public List<Student> getAll() throws Exception {
+        return studentJdbcTemplate
+                .getAll(
+                        "SELECT * FROM TBL_STUDENTS",
+                        new StudentMapper()
+                );
+    }
 
     public Student getStudentById(Long id) throws Exception {
         return studentJdbcTemplate

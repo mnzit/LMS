@@ -4,9 +4,19 @@ import com.allena.lms.db.JdbcTemplate;
 import com.allena.lms.mapper.BookMapper;
 import com.allena.lms.model.Book;
 
+import java.util.List;
+
 public class BookRepository {
 
     private final JdbcTemplate<Book> bookJdbcTemplate = new JdbcTemplate<>();
+
+    public List<Book> getAll() throws Exception {
+        return bookJdbcTemplate
+                .getAll(
+                        "SELECT * FROM TBL_BOOKS",
+                        new BookMapper()
+                );
+    }
 
     public Book getById(Long id) throws Exception {
         return bookJdbcTemplate

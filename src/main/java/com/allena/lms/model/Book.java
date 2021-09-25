@@ -59,4 +59,15 @@ public class Book implements Serializable {
         this.pages = pages;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", isbn=" + isbn +
+                ", edition=" + edition +
+                ", price=" + price +
+                ", pages=" + pages +
+                '}';
+    }
 }

@@ -29,6 +29,8 @@ public class Main {
                 System.out.println("[2] BORROW BOOK");
                 System.out.println("[3] RETURN BOOK");
                 System.out.println("[4] ADD STUDENT");
+                System.out.println("[5] LIST STUDENTS");
+                System.out.println("[6] LIST BOOKS");
                 System.out.println("[Q] QUIT");
                 String condition = scanner.nextLine();
                 switch (condition){
@@ -43,6 +45,12 @@ public class Main {
                         break;
                     case "4":
                         adminView.addStudent();
+                        break;
+                    case "5":
+                        adminView.listStudents();
+                        break;
+                    case "6":
+                        adminView.listBooks();
                         break;
                     case "Q":
                         System.out.println("Library Management System Closed...");

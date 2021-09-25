@@ -142,4 +142,12 @@ public class AdminView {
             System.err.println("RETURN_EXCEPTION: " + e.getMessage());
         }
     }
+
+    public void listBooks(){
+        bookController.listBooks();
+    }
+
+    public void listStudents(){
+        studentController.listStudents();
+    }
 }

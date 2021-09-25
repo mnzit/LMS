@@ -57,5 +57,17 @@ public class Student implements Serializable {
     public void setSemester(int semester) {
         this.semester = semester;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", course='" + course + '\'' +
+                ", branch='" + branch + '\'' +
+                ", year=" + year +
+                ", semester=" + semester +
+                '}';
+    }
 }
 
