@@ -11,13 +11,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while (true){
             if(adminView.getCurrentAdmin() == null) {
+                System.out.println("Library Management System Started...");
+
                 System.out.println("Press [L] to Login & Press [Q] to quit");
                 String condition = scanner.nextLine();
                 switch (condition){
                     case "L":
                         adminView.login();
                         break;
-                    case "q":
+                    case "Q":
+                        System.out.println("Library Management System Closed...");
                         System.exit(0);
                 }
             }else{
@@ -41,7 +44,8 @@ public class Main {
                     case "4":
                         adminView.addStudent();
                         break;
-                    case "q":
+                    case "Q":
+                        System.out.println("Library Management System Closed...");
                         System.exit(0);
                 }
             }
