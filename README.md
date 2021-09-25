@@ -34,7 +34,7 @@
         * name
         * email
         * password
-
+ ![Schema](LMSSchema.png)
 > How to start the application ?
 * Begin with Configuring your database username and password in DbConfig.java File 
 * Fire all the queries in schema.sql
