@@ -1,8 +1,8 @@
 # Library Management System
 
 > What can you do in this application
-* Add Students
-* Add Books
+* Add/View Students
+* Add/View Books
 * Return Borrowed Books
 * Borrow Books
 >Admin is basically librarian !
