@@ -17,7 +17,7 @@ public class Main {
                     case "L":
                         adminView.login();
                         break;
-                    case "Q":
+                    case "q":
                         System.exit(0);
                 }
             }else{
@@ -41,7 +41,7 @@ public class Main {
                     case "4":
                         adminView.addStudent();
                         break;
-                    case "Q":
+                    case "q":
                         System.exit(0);
                 }
             }
