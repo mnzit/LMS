@@ -150,4 +150,57 @@ public class AdminView {
     public void listStudents(){
         studentController.listStudents();
     }
+
+    public void init(){
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            if(currentAdmin == null) {
+                System.out.println("Library Management System Started...");
+
+                System.out.println("Press [L] to Login & Press [Q] to quit");
+                String condition = scanner.nextLine();
+                switch (condition){
+                    case "L":
+                        login();
+                        break;
+                    case "Q":
+                        System.out.println("Library Management System Closed...");
+                        System.exit(0);
+                }
+            }else{
+                System.out.println("Press the specific code to proceed");
+                System.out.println("[1] ADD BOOK");
+                System.out.println("[2] BORROW BOOK");
+                System.out.println("[3] RETURN BOOK");
+                System.out.println("[4] ADD STUDENT");
+                System.out.println("[5] LIST STUDENTS");
+                System.out.println("[6] LIST BOOKS");
+                System.out.println("[Q] QUIT");
+                String condition = scanner.nextLine();
+                switch (condition){
+                    case "1":
+                        addBook();
+                        break;
+                    case "2":
+                        borrowBook();
+                        break;
+                    case "3":
+                        returnBook();
+                        break;
+                    case "4":
+                        addStudent();
+                        break;
+                    case "5":
+                        listStudents();
+                        break;
+                    case "6":
+                        listBooks();
+                        break;
+                    case "Q":
+                        System.out.println("Library Management System Closed...");
+                        System.exit(0);
+                }
+            }
+        }
+    }
 }
